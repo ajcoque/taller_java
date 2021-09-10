@@ -86,4 +86,70 @@ public class Ejercicios_Java {
                 break;
         }
     }
+
+    public String reemplazarString(String texto) {
+        texto = texto.replace("A", "E");
+        return texto.replace("a", "e");
+    }
+
+    public String concatenarTextos(String texto, String textoIngresado) {
+        return texto.concat(" " + textoIngresado);
+    }
+
+    public String eliminarEspacios(String frase) {
+        return frase.replaceAll("\\s", "");
+    }
+
+    public int mostrarLongitudCadena(String frase) {
+        return frase.length();
+    }
+
+    public void contarVocales(String frase) {
+        frase = frase.toLowerCase();
+        int contadorA = 0;
+        int contadorE = 0;
+        int contadorI = 0;
+        int contadorO = 0;
+        int contadorU = 0;
+
+        for (int i = 0; i < frase.length(); i++) {
+            switch (frase.charAt(i)) {
+                case 'a':
+                    contadorA++;
+                    break;
+                case 'e':
+                    contadorE++;
+                    break;
+                case 'i':
+                    contadorI++;
+                    break;
+                case 'o':
+                    contadorO++;
+                    break;
+                case 'u':
+                    contadorU++;
+                    break;
+            }
+        }
+        System.out.println("Numero de la vocal a: " + contadorA +
+                "\nNumero de la vocal e: " + contadorE +
+                "\nNumero de la vocal i: " + contadorI +
+                "\nNumero de la vocal o: " + contadorO +
+                "\nNumero de la vocal u: " + contadorU);
+    }
+
+    public void compararPalabras(String palabra_1, String palabra_2) {
+
+        if (palabra_1.equalsIgnoreCase(palabra_2)) {
+            System.out.println("Las palabras son identicas");
+        } else if (palabra_1.length() != palabra_2.length()) {
+            System.out.println("Las palabras se diferencian en tamaño");
+        } else {
+            for (int i = 0; i < palabra_1.length(); i++) {
+                if (palabra_1.charAt(i) != palabra_2.charAt(i)) {
+                    System.out.println("Las palabras se diferencian en el caracter: " + (i + 1));
+                }
+            }
+        }
+    }
 }

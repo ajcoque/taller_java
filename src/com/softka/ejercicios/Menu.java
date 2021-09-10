@@ -11,6 +11,7 @@ public class Menu {
 
         double numero_1 = 0;
         double numero_2 = 0;
+        String frase = "";
         int opcion;
 
 
@@ -84,6 +85,36 @@ public class Menu {
                     String dia = leer.next();
                     funcionesJava.comprobarDiaLaboral(dia);
                     break;
+                case 9:
+                    System.out.println("\n9.----------------PUNTO 9----------------");
+                    String texto = "La sonrisa sera le mejor arma contra la tristeza";
+                    String textoModificado = funcionesJava.reemplazarString(texto);
+                    System.out.println("Texto reemplazado: " + textoModificado);
+                    System.out.println("\nIngrese texto para adicionar:");
+                    String textoIngresado = leer.nextLine();
+                    System.out.println("Texto final: " +
+                            funcionesJava.concatenarTextos(textoModificado, textoIngresado));
+                    break;
+                case 10:
+                    System.out.println("\n10.-----------PUNTO 10---------------");
+                    System.out.println("\nIngrese frase: ");
+                    frase = leer.nextLine();
+                    System.out.println("Frase sin espacios: " + funcionesJava.eliminarEspacios(frase));
+                    break;
+                case 11:
+                    System.out.println("\n11.-------------PUNTO 11--------------");
+                    System.out.println("\nIngrese frase: ");
+                    frase = leer.nextLine();
+                    funcionesJava.contarVocales(frase);
+                    break;
+                case 12:
+                    System.out.println("\n12.-----------PUNTO 12------------------");
+                    System.out.println("Ingrese palabra 1: ");
+                    String palabra_1 = leer.next();
+                    System.out.println("Ingrese palabra 2: ");
+                    String palabra_2 = leer.next();
+                    funcionesJava.compararPalabras(palabra_1, palabra_2);
+                    break;
                 case 19:
                     System.exit(0);
                     break;
@@ -91,7 +122,7 @@ public class Menu {
                     System.out.println("OPCION INCORRECTA");
                     break;
             }
-        } while (opcion != 8);
+        } while (opcion != 19);
     }
 
 }
