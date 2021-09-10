@@ -1,9 +1,7 @@
 package com.softka.ejercicios;
 
 public interface Entregable {
-    default boolean entregar() {
-        return true;
-    }
+    public void entregar(boolean entrega);
 
     default boolean devolver() {
         return false;

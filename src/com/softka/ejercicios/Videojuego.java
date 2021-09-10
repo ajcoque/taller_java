@@ -63,8 +63,8 @@ public class Videojuego implements Entregable {
     }
 
     @Override
-    public boolean entregar() {
-        return Entregable.super.entregar(); //To change body of generated methods, choose Tools | Templates.
+    public void entregar(boolean entrega) {
+        this.entregado = entrega;
     }
 
     @Override

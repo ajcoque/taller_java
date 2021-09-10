@@ -234,19 +234,20 @@ public class Menu {
                     videojuegos[4] = videojuego_1;
 
 
+                    videojuegos[0].entregar(true);
+                    videojuegos[1].entregar(true);
+                    videojuegos[3].entregar(true);
+                    series[1].entregar(true);
+                    series[3].entregar(true);
+
                     System.out.println("Numero videojuegos entregados: "
                             + funcionesJava.contarVideojuegosEntregados(videojuegos));
 
                     System.out.println("Numero serie entregadas: "
                             + funcionesJava.contarSeriesEntregadas(series));
 
-                    videojuegos[0].entregar();
-                    videojuegos[3].entregar();
-                    videojuegos[1].entregar();
-                    series[1].entregar();
-                    series[3].entregar();
-
-                    System.out.println("Mayor: " + funcionesJava.obtenerSerieMasHoras(series));
+                    System.out.println("Mayor Horas: " + funcionesJava.obtenerVideojuegoMasHoras(videojuegos));
+                    System.out.println("Mayor Temporadas: " + funcionesJava.obtenerSerieMasHoras(series));
                     break;
                 case 19:
                     System.exit(0);
