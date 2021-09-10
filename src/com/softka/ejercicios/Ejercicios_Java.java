@@ -222,4 +222,72 @@ public class Ejercicios_Java {
 
     }
 
+    public double sumarPreciosElectrodomesticos(Electrodomestico[] electrodomesticos) {
+
+        double suma = 0;
+
+        for (Electrodomestico electrodomestico : electrodomesticos) {
+            suma += electrodomestico.precioFinal();
+        }
+        return suma;
+    }
+
+    public double sumarPreciosTelevision(Electrodomestico[] electrodomesticos) {
+        double suma = 0;
+        for (Electrodomestico electrodomestico : electrodomesticos) {
+            if (electrodomestico instanceof Television) {
+                suma += electrodomestico.precioFinal();
+            }
+        }
+        return suma;
+    }
+
+    public double sumarPreciosLavadora(Electrodomestico[] electrodomesticos) {
+        double suma = 0;
+        for (Electrodomestico electrodomestico : electrodomesticos) {
+            if (electrodomestico instanceof Lavadora) {
+                suma += electrodomestico.precioFinal();
+            }
+        }
+        return suma;
+    }
+
+    public int contarVideojuegosEntregados(Videojuego[] videojuegos) {
+        int contador = 0;
+        for (Videojuego videojuego : videojuegos) {
+            if (videojuego.isEntregado(videojuego)) {
+                contador++;
+                System.out.println(videojuego.toString());
+            }
+        }
+        return contador;
+    }
+
+    public int contarSeriesEntregadas(Serie[] series) {
+        int contador = 0;
+        for (Serie serie : series) {
+            if (serie.isEntregado(serie)) {
+                contador++;
+                System.out.println(serie.toString());
+            }
+        }
+        return contador;
+    }
+
+    public int obtenerVideojuegoMasHoras(Videojuego[] videojuegos) {
+        int mayor = 0;
+        for (Videojuego videojuego : videojuegos) {
+            mayor += videojuego.compareTo(videojuego, mayor);
+        }
+        return mayor;
+    }
+
+    public int obtenerSerieMasHoras(Serie[] series) {
+        int mayor = 0;
+        for (Serie serie : series) {
+            mayor = serie.compareTo(serie, mayor);
+        }
+        return mayor;
+    }
+
 }

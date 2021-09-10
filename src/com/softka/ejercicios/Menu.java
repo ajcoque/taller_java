@@ -166,6 +166,88 @@ public class Menu {
                     System.out.println(persona_2.toString());
                     System.out.println(persona_3.toString());
                     break;
+                case 17:
+                    System.out.println("\n17.---------------------PUNTO 17-------------------");
+                    System.out.println("\n********************Electrodomesticos**************");
+                    Electrodomestico electrodomesticos[] = new Electrodomestico[10];
+
+                    Electrodomestico electrodomestico_1 = new Electrodomestico(20, 25);
+                    Electrodomestico electrodomestico_2 = new Electrodomestico(550, "blanco", 'A', 50);
+                    Electrodomestico electrodomestico_3 = new Electrodomestico(282, 29);
+
+                    Lavadora lavadora_1 = new Lavadora(50, 20);
+                    Lavadora lavadora_2 = new Lavadora(450, "GRIS", 'F', 80, 54);
+                    Lavadora lavadora_3 = new Lavadora(507, 27);
+
+                    Television televisor_1 = new Television(100, 10);
+                    Television televisor_2 = new Television(804, "NEGRO", 'B', 56, 32, true);
+                    Television televisor_3 = new Television(1000, 50);
+                    Television televisor_4 = new Television(984, "AZUL", 'E', 16, 16, true);
+
+                    electrodomesticos[0] = electrodomestico_1;
+                    electrodomesticos[1] = lavadora_1;
+                    electrodomesticos[2] = televisor_1;
+                    electrodomesticos[3] = electrodomestico_2;
+                    electrodomesticos[4] = lavadora_2;
+                    electrodomesticos[5] = televisor_2;
+                    electrodomesticos[6] = electrodomestico_3;
+                    electrodomesticos[7] = lavadora_3;
+                    electrodomesticos[8] = televisor_3;
+                    electrodomesticos[9] = televisor_4;
+
+                    for (int i = 0; i < electrodomesticos.length; i++) {
+                        System.out.println("Electrodomestico " + (i + 1) + " Precio Base: " + electrodomesticos[i].getPrecio_base() +
+                                " Peso: " + electrodomesticos[i].getPeso() + " Precio Final: " + electrodomesticos[i].precioFinal());
+                    }
+
+                    System.out.println("La suma de precios de televisores es: " + funcionesJava.sumarPreciosTelevision(electrodomesticos));
+                    System.out.println("La suma de precios de lavadoras es: " + funcionesJava.sumarPreciosLavadora(electrodomesticos));
+                    System.out.println("La suma de precios de electrodomesticos es: " + funcionesJava.sumarPreciosElectrodomesticos(electrodomesticos));
+                    break;
+                case 18:
+                    System.out.println("\n18.-----------------PUNTO 18------------------");
+                    Serie series[] = new Serie[5];
+                    Videojuego videojuegos[] = new Videojuego[5];
+
+                    Serie serie_1 = new Serie("Serie 1", "Creador 1");
+                    Serie serie_2 = new Serie("titulo 2", 5, "terror", "creador 2");
+                    Serie serie_3 = new Serie("Serie 3", "Creador 3");
+                    Serie serie_4 = new Serie("titulo 4", 4, "suspenso", "creador 4");
+                    Serie serie_5 = new Serie("Serie 5", "Creador 5");
+
+                    series[0] = serie_1;
+                    series[1] = serie_2;
+                    series[2] = serie_3;
+                    series[3] = serie_4;
+                    series[4] = serie_5;
+
+                    Videojuego videojuego_1 = new Videojuego("videojuego 1", 50);
+                    Videojuego videojuego_2 = new Videojuego("videojuego 2", 10, "terror", "compania 1");
+                    Videojuego videojuego_3 = new Videojuego("videojuego 3", 50);
+                    Videojuego videojuego_4 = new Videojuego("videojuego 4", 10, "suspenso", "compania 4");
+                    Videojuego videojuego_5 = new Videojuego("videojuego 5", 50);
+
+                    videojuegos[0] = videojuego_1;
+                    videojuegos[1] = videojuego_1;
+                    videojuegos[2] = videojuego_1;
+                    videojuegos[3] = videojuego_1;
+                    videojuegos[4] = videojuego_1;
+
+
+                    System.out.println("Numero videojuegos entregados: "
+                            + funcionesJava.contarVideojuegosEntregados(videojuegos));
+
+                    System.out.println("Numero serie entregadas: "
+                            + funcionesJava.contarSeriesEntregadas(series));
+
+                    videojuegos[0].entregar();
+                    videojuegos[3].entregar();
+                    videojuegos[1].entregar();
+                    series[1].entregar();
+                    series[3].entregar();
+
+                    System.out.println("Mayor: " + funcionesJava.obtenerSerieMasHoras(series));
+                    break;
                 case 19:
                     System.exit(0);
                     break;
