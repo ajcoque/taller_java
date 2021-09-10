@@ -53,6 +53,37 @@ public class Menu {
                     System.out.println("El area del circulo es: " +
                             df.format(funcionesJava.calcularAreaCirculo(radio)));
                     break;
+                case 4:
+                    System.out.println("\n4.---------------PUNTO 4---------------");
+                    double iva = 0.21;
+                    double precioBase = 0;
+                    System.out.println("Ingrese precio base: ");
+                    precioBase = leer.nextDouble();
+                    boolean isPositivo = funcionesJava.is_Positivo(precioBase);
+                    if (isPositivo) System.out.println("Precio Final: "
+                            + df.format(funcionesJava.calcularPrecioFinal(precioBase, iva)));
+                    else System.out.println("No se permiten precios base negativos");
+
+                    break;
+                case 5:
+                    System.out.println("\n5.-----------------PUNTO 5--------------");
+                    funcionesJava.imprimirPares_Impares_While();
+                    break;
+                case 6:
+                    System.out.println("\n6.--------------PUNTO 6---------------");
+                    funcionesJava.imprimirPares_Impares_For();
+                    break;
+                case 7:
+                    System.out.println("\n7.-------------PUNTO 7----------------");
+                    System.out.println("Numero mayor o igual que cero:"
+                            + funcionesJava.comprobarNumero(leer));
+                    break;
+                case 8:
+                    System.out.println("\n8.----------------PUNTO 8----------------");
+                    System.out.println("Ingrese un dia de la semana: ");
+                    String dia = leer.next();
+                    funcionesJava.comprobarDiaLaboral(dia);
+                    break;
                 case 19:
                     System.exit(0);
                     break;
