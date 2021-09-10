@@ -46,6 +46,13 @@ public class Menu {
                                 + " \ncoma y no punto para separar");
                     }
                     break;
+                case 3:
+                    System.out.println("\n3.---------------PUNTO 3-------------");
+                    System.out.println("Ingrese radio del circulo:");
+                    double radio = leer.nextDouble();
+                    System.out.println("El area del circulo es: " +
+                            df.format(funcionesJava.calcularAreaCirculo(radio)));
+                    break;
                 case 19:
                     System.exit(0);
                     break;

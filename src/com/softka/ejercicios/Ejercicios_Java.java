@@ -9,4 +9,8 @@ public class Ejercicios_Java {
         return "Numero 2";
     }
 
+    public double calcularAreaCirculo(double radio) {
+        return Math.PI * Math.pow(radio, 2);
+    }
+
 }
