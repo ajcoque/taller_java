@@ -1,5 +1,9 @@
 package com.softka.ejercicios;
 
+import java.text.DecimalFormat;
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 public class Ejercicios_Java {
@@ -152,4 +156,70 @@ public class Ejercicios_Java {
             }
         }
     }
+
+    public void consultarFecha_Hora(String formatoFecha, String formatoHora) {
+        LocalDate fechaActual = LocalDate.now();
+        LocalTime horaActual = LocalTime.now();
+
+        DateTimeFormatter formateadorFecha = DateTimeFormatter.ofPattern(formatoFecha);
+        DateTimeFormatter formateadorHora = DateTimeFormatter.ofPattern(formatoHora);
+
+        System.out.println("La fecha actual es: " + fechaActual.format(formateadorFecha));
+        System.out.println("La hora actual es: " + horaActual.format(formateadorHora));
+    }
+
+    public void incrementarDe2en2(int numero) {
+        for (int i = numero; i <= 1000; i += 2) {
+            System.out.println("Numero: " + i);
+        }
+    }
+
+    public void mostrarMenu(Scanner leer) {
+        int opcion;
+        do {
+            System.out.println("\n*********** GESTION CINEMATOGRÁFICA ***********");
+            System.out.println("1-NUEVO ACTOR" +
+                    "\n2-BUSCAR ACTOR" +
+                    "\n3-ELIMINAR ACTOR" +
+                    "\n4-MODIFICAR ACTOR" +
+                    "\n5-VER TODOS LOS ACTORES" +
+                    "\n6-VER PELICULAS DE LOS ACTORES" +
+                    "\n7-VER CATEGORIA DE LAS PELICULAS DE LOS ACTORES" +
+                    "\n8-SALIR");
+            System.out.println("***********************************************");
+            opcion = leer.nextInt();
+
+            switch (opcion) {
+                case 1:
+                    System.out.println("1. NUEVO ACTOR");
+                    break;
+                case 2:
+                    System.out.println("2. BUSCAR ACTOR");
+                    break;
+                case 3:
+                    System.out.println("3. ELIMINAR ACTOR");
+                    break;
+                case 4:
+                    System.out.println("4. MODIFICAR ACTOR");
+                    break;
+                case 5:
+                    System.out.println("5. VER TODOS LOS ACTORES");
+                    break;
+                case 6:
+                    System.out.println("6. VER PELICULAS DE LOS ACTORES");
+                    break;
+                case 7:
+                    System.out.println("7. VER CATEGORIA DE LAS PELICULAS DE LOS ACTORES");
+                    break;
+                case 8:
+                    System.exit(0);
+                    break;
+                default:
+                    System.out.println("OPCION INCORRECTA");
+                    break;
+            }
+        } while (opcion != 8);
+
+    }
+
 }

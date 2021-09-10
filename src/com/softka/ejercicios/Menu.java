@@ -115,6 +115,57 @@ public class Menu {
                     String palabra_2 = leer.next();
                     funcionesJava.compararPalabras(palabra_1, palabra_2);
                     break;
+                case 13:
+                    System.out.println("\n13.----------------PUNTO 13----------------");
+                    String formatoFecha = "yyyy/MM/dd";
+                    String formatoHora = "hh:mm:ss";
+                    funcionesJava.consultarFecha_Hora(formatoFecha, formatoHora);
+                    break;
+                case 14:
+                    System.out.println("\n14.-----------------PUNTO 14--------------");
+                    System.out.println("Ingresar numero inicial del incremento: ");
+                    int numeroIncremento = leer.nextInt();
+                    funcionesJava.incrementarDe2en2(numeroIncremento);
+                    break;
+                case 15:
+                    System.out.println("\n15.------------PUNTO 15--------------");
+                    funcionesJava.mostrarMenu(leer);
+                    break;
+                case 16:
+                    System.out.println("\n16.-------------PUNTO 16---------------");
+                    System.out.println("*************** Datos de Persona ******************");
+                    System.out.println("Ingrese nombre: ");
+                    String nombre = leer.nextLine();
+                    System.out.println("Ingrese edad: ");
+                    int edad = leer.nextInt();
+                    System.out.println("Ingrese sexo, H para hombre, M para mujer: ");
+                    char sexo = leer.next().charAt(0);
+                    System.out.println("Ingrese peso: ");
+                    double peso = leer.nextDouble();
+                    System.out.println("Ingrese altura: ");
+                    double altura = leer.nextDouble();
+
+                    Persona persona_1 = new Persona(nombre, edad, sexo, peso, altura);
+                    Persona persona_2 = new Persona(nombre, edad, sexo);
+                    Persona persona_3 = new Persona();
+
+                    persona_3.setNombre("Rafael");
+                    persona_3.setEdad(15);
+                    persona_3.setPeso(61);
+                    persona_3.setAltura(1.71);
+
+                    persona_1.calcularIMC();
+                    persona_2.calcularIMC();
+                    persona_3.calcularIMC();
+
+                    System.out.println((persona_1.isMayorDeEdad()) ? "Es mayor de edad" : "No es mayor de edad");
+                    System.out.println((persona_2.isMayorDeEdad()) ? "Es mayor de edad" : "No es mayor de edad");
+                    System.out.println((persona_3.isMayorDeEdad()) ? "Es mayor de edad" : "No es mayor de edad");
+
+                    System.out.println(persona_1.toString());
+                    System.out.println(persona_2.toString());
+                    System.out.println(persona_3.toString());
+                    break;
                 case 19:
                     System.exit(0);
                     break;
